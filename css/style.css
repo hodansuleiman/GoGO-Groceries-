@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 1005;
+    height: 80px;
+}
+
+.navbar, footer {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DCD6FF; 
+    
+   
+}
+
+.company-logo {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: #FFFAF0;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #D6F0FF;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color:black;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a { 
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+};
+
+h1{
+    display: flex;
+    text-align: center;
+    color: aquamarine;
+}
+.auth, .userInput {
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-left: 20px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+
+  .userregistration,.y-wrap{
+    margin: 0 auto;
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h3{
+    font-size: 1rem;
+    text-align: center;
+  }
+
+/* splash screen */
+.intro {
+    position: fixed;
+    z-index: 1;
+    left:0;
+    top: 0;
+    width: 100;
+    height:100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+main {
+    position: relative;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+  }
+  
+.logo-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.logo{
+    position:relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity:0;
+}  
+
+/* javascript appyling active classes */
+
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5;
+}
+
+.logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5;
+}
+
