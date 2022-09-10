@@ -1,23 +1,23 @@
-{
+module.exports = {
   "development": {
-    "username": "root",
+    "username": "admin",
     "password": null,
-    "database": "database_development",
+    "database": "GogoGroceries_dev",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "database_test",
+    "database": "GogoGroceries_test",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "database_production",
+    "database": "GogoGroceries_prod",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   }
 }
