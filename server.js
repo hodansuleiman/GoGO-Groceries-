@@ -1,5 +1,5 @@
 const express = require('express');
-const expressLayouts = require ('express-ejs-layouts');
+
 
 const server = express();
 const port = 8080
