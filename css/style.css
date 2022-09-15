@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://i.pinimg.com/originals/ed/4b/3a/ed4b3a84e0f361f56b3e37ff5fe9eb3d.jpg');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Open+Sans:wght@300&family=Pacifico&family=Poppins:wght@300&display=swap');
+
+
+:root{
+    --orange:#ff7800;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
 *{
     margin: 0;
     padding: 0;
@@ -5,43 +19,59 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.header{
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 1005;
-    height: 80px;
+
+/*Company Title */
+
+.GoGoHeader{
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #fd7e14;
 }
 
+/*Navbar within header and footer */
 .navbar, footer {
     display: flex;
     position: relative;
+    
     justify-content: space-between;
     align-items: center;
-    background-color: #DCD6FF; 
-    
-   
+    background-color: green; 
 }
 
-.company-logo {
-    font-size: 1.5rem;
-    margin: .5rem;
+footer .GoGoHeader h1{
+    font-size: small;
+    font-weight: 700;
+    position: fixed;
+    right:30px;
+    margin-bottom: 20px;
 }
+footer{
+    position: fixed;
+    bottom:10px;
+    height:40px;
+    width:100%;
+}
+/* Navbar-links within header  */
 
 .navbar-links {
     height: 100%;
 }
 
+/* Navbar-links within UL  */
 .navbar-links ul {
     display: flex;
     margin: 0;
     padding: 0;
 }
 
+/* Navbar-links within LI  */
 .navbar-links li {
     list-style: none;
 }
 
+/* Navbar-links within LI tagged with an ahref  */
 .navbar-links li a {
     display: block;
     text-decoration: none;
@@ -49,10 +79,13 @@
     padding: 1rem;
 }
 
+
+/* Navbar-links within LI include hover  */
 .navbar-links li:hover {
-    background-color: #D6F0FF;
+    background-color:#fd7e14;
 }
 
+/* Toggle menu */
 .toggle-button {
     position: absolute;
     top: .75rem;
@@ -64,14 +97,25 @@
     height: 21px;
 }
 
+/* Toggle menu bar  */
 .toggle-button .bar {
     height: 3px;
     width: 100%;
-    background-color:black;
+    background-color: white;
     border-radius: 10px;
 }
 
-@media (max-width: 800px) {
+/* BACKGROUND FOR ALL PAGES  */
+body {
+    background-image: url('https://i.pinimg.com/originals/ed/4b/3a/ed4b3a84e0f361f56b3e37ff5fe9eb3d.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+ 
+}
+
+
+/* Media query for toggle menu  */
+@media screen and (max-width: 800px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -104,78 +148,387 @@
     }
 };
 
-h1{
-    display: flex;
-    text-align: center;
-    color: aquamarine;
-}
-.auth, .userInput {
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
+
+
+
+
+  /* styling to be applied towards ALL buttons   */
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
     font-size: 1rem;
-    margin-left: 20px;
-    padding: 5px;
+    border-radius: .5rem;
+    border:.2rem solid var(--black);
+    color:var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+  /*  hover styling to be applied towards ALL buttons   */
+.btn:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+  /* styling to be applied towards ALL h3's   */
+.h3{
+    font-size: 20px;
+    color:#333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+
+ 
+/* STYLING FOR HOME/LOGIN/LANDING PAGE STARTS   */
+
+  /* login-form center of page   */
+.login-form{
+    text-align: center;
+    padding:10px 15px;
+    padding:20px;
+    width:700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    margin-bottom: 10px;
+    display: block;
+    border:1px solid #ccc;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
+    border:1px solid #000;
+}
+
+  /* STYLING FOR REGISTRATION/payment PAGE STARTS   */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:25px;
+    min-height: 100vh;
+    
+  }
+  
+  .container form{
+    padding:20px;
+    width:80%;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  }
+  
+  .container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+  }
+  
+  .container form .row .col{
+    flex:1 1 250px;
+  }
+  
+  .container form .row .col .title{
+    font-size: 20px;
+    color:#333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .container form .row .col .inputBox{
+    margin:15px 0;
+  }
+  
+  .container form .row .col .inputBox span{
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .container form .row .col .inputBox input{
+    width: 100%;
+    border:1px solid #ccc;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
+  }
+  
+  .container form .row .col .inputBox input:focus{
+    border:1px solid #000;
+  }
+  
+  .container form .row .col .flex{
+    display: flex;
+    gap:15px;
+  }
+  
+  .container form .row .col .flex .inputBox{
+    margin-top: 5px;
+  }
+  
+  .container form .row .col .inputBox img{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+  }
+  
+  .container form .submit-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    background: #27ae60;
+    color:#fff;
+    margin-top: 5px;
     cursor: pointer;
   }
   
-
-  .userregistration,.y-wrap{
-    margin: 0 auto;
-    padding: 1rem;
-    flex-direction: column;
-    text-align: center;
+  .container form .submit-btn:hover{
+    background: #2ecc71;
   }
 
-  h3{
-    font-size: 1rem;
-    text-align: center;
-  }
+/* STYLING FOR SHOP SECTION STARTS   */
 
-/* splash screen */
-.intro {
-    position: fixed;
-    z-index: 1;
-    left:0;
-    top: 0;
-    width: 100;
-    height:100vh;
-    background-color: #161616;
-    transition: 1s;
-}
-main {
-    position: relative;
-    left: 10%;
-    bottom: 1rem;
-    font-size: 1.6rem;
-  }
-  
-.logo-header{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-}
+  /* wrapper holding everything in the upper section of the shop area, containing content, text , and about link   */
+ .home-pgbuton .home{
+    display:flex;
+    align-items: center;
+    min-height: 20vh;
+ }
 
-.logo{
-    position:relative;
+
+  /* styling to .home-pgbuton ,home ,section and content   */
+ .home-pgbuton .home .content{
+    width: 50rem;
+ }
+
+   /* styling to home-pgbutton,  home, section and span   */
+ .home-pgbuton .home span{
+    color:var(--orange);
+    font-size: 2.5rem;
+ }
+
+  /* styling to home-pgbutton home, and h3   */
+ .home-pgbuton .home .content h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    color:var(--black);
+ }
+
+   /* styling to home-pgbutton home, section, and h3   */
+ .home-pgbuton .home .content p{
+    font-size:1.2rem;
+    padding: 1rem 0;
+    line-height: 2;
+    color: var (--light-color);
+ }
+
+   /* styling to home-pgbutton home,content, and a  */
+ .home-pgbuton .home .content{
     display: inline-block;
-    bottom: -20px;
-    opacity:0;
-}  
+    width:auto;
+ }
 
-/* javascript appyling active classes */
+ /* STYLING FOR CATEGORIES SECTION  GRID WITHIN THE SHOP PAGE STARTS   */
 
-.logo.active{
-    bottom: 0;
-    opacity: 1;
-    transition: ease-in-out 0.5;
+ .categories .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap:1.5rem;
+}
+ .categories .box-container .box{
+    padding:3rem 2rem;
+    border-radius: .5rem;
+    background:#fff;
+    box-shadow: var(--box-shadow);
+    outline:var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
 }
 
-.logo.fade{
-    bottom: 150px;
-    opacity: 0;
-    transition: ease-in-out 0.5;
+.categories .box-container .box:hover{
+    outline:var(--outline-hover);
+    outline-offset: 0rem;
 }
 
+.categories .box-container .box img{
+    margin:1rem 0;
+    height:15rem;
+}
+
+.categories .box-container .box h3{
+   font-size: 2rem;
+   color:var(--black);
+   line-height: 1.8;
+}
+
+.categories .box-container .box p{
+    font-size: 1.7rem;
+    color:var(--light-color);
+    line-height: 1.8;
+    padding:1rem 0;
+}
+
+.box{
+    list-style-type: none;
+}
+ /* STYLING FOR SELECTED CATEGORIES (FRUIT, MEAT, DAIRY, ETC) PAGE STARTS   */
+.grocerylist{
+    position: relative;
+    width: 450px;
+    margin: 100px auto 0;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding:20px;
+    width:700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+
+  }
+  .grocerylist li{
+      display: flex;
+      padding:0;
+      margin: 5px 0;
+      list-style-type: none;
+  }
+
+  .checkout{
+    padding-left: 20%;
+}
+
+
+.itemList{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btnQuantity{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.2rem .5rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    border:.2rem solid var(--black);
+    color:var(--black);
+    cursor: pointer;
+    background: none;
+    text-decoration:none;
+}
+#divTotal{
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.btnQuantity:hover{
+    background: var(--orange);
+    color:#fff;
+}
+.price{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.spanQuantity{
+    padding-left: 1px;
+    padding-right: 20px;
+}
+
+/* STYLING FOR SHOPPING LIST PAGE STARTS*/
+
+table, th, td{
+   
+    padding-left:10px;
+    padding-right:10px;
+}
+
+td{
+    font-size: 14px;
+}
+th{
+    font-size: 18px;
+}
+
+#divShoppingList{
+    margin-left: 20px;
+    padding:10px 15px;
+    width:700px;
+    background: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    margin-bottom: 10px;
+    display: block;
+   
+   
+    font-size: 15px;
+    text-transform: none;
+    
+}
+
+
+/* STYLING FOR REVIEW PAGE STARTS*/
+  
+  .review .review-slider{
+    padding:1rem;
+}
+
+.review .review-slider .box{
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding:3rem 2rem;
+    outline-offset: -1rem;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+}
+
+.review .review-slider .box:hover{
+    outline:var(--outline-hover);
+    outline-offset: 0rem;
+}
+
+.review .review-slider .box img{
+    height:10rem;
+    width:10rem;
+    border-radius: 50%;
+}
+
+.review .review-slider .box p{
+    padding:1rem 0;
+    line-height: 1.8;
+    color:var(--light-color);
+    font-size: 1.5rem;
+}
+
+.review .review-slider .box h3{
+    padding-bottom: .5rem;
+    color:var(--black);
+    font-size: 2.2rem;
+}
+
+.review .review-slider .box .stars i{
+    color:var(--orange);
+    font-size: 1.7rem;
+}
+
+/* STYLING FOR REVIEW PAGE STARTS*/
+
+.aboutpg{
+    padding-top:90px;
+    padding-left:30px;
+    width:50%;
+    background: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    margin-bottom: 10px;
+    display: block;
+    
+    font-size: 15px;
+    text-transform: none;
+   
+    color: black;
+}
+.aboutpg li{
+    padding-bottom:20px;
+}
+input {
+    margin-bottom: 10px;
+}

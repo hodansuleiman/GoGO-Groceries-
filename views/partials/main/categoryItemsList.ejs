@@ -1,0 +1,28 @@
+
+<div class="categorylistwrapper">
+<h3>Grocery List</h3>
+    <ul class="grocerylist">
+        <%items.forEach ((item, index)=>{
+            const itemStr = JSON.stringify(item);
+            %>
+
+        <li class="itemList"><%=item.description%></li>
+
+            <img src="<%=item.imageURL%>"/>
+            <span class="price">$<%=item.price.regular%></span>
+            <span class="price">Qty: </span>
+<span class="spanQuantity">
+        <a href="javascript:adjustQuanity(<%=index%>, -1)" class="btnQuantity">-</a>  <!--javascript:adjustQuanity is the old school way of writing an event handler going through index-->
+        <span id="qty<%=index%>">0</span>
+        <a href="javascript:adjustQuanity(<%=index%>, 1)" class="btnQuantity">+</a>
+</span>
+        <a href="javascript:addToCart (<%=item.productId%>, <%=index%>)" class="btnQuantity">Add to cart</a>
+        <input type="hidden" id="item<%=index%>" value = "<%=itemStr%>"/>
+        <% });%> 
+        <div id="divTotal">Total: $0.00</div>
+        <div class="checkout"> <a href="javascript:checkout()" class="btnQuantity">Shopping List</a></div>
+    </ul>
+</div>
+
+
+

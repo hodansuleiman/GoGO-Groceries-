@@ -1,46 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <title><%=title%></title>
-</head>
-<body>
-    <div class="intro">
-        <h1 class="logo-header">
-            <span class="logo">Super</span><span class="logo"> moms</span>
-        </h1>
-    </div>
-     <main>
-        <div class="webpagetitle">
-            <h1> Supermoms</h1>
+
+    <div class="container">
+        <div class="homepagewallpaper">
+            <form action="login" class="login-form" method="post">
+                <h3>LOGIN NOW</h3>
+                <input type="email" name="email" id="email" placeholder="your email" class="box">
+                <input type="password" name="password" id="password" placeholder="your password" class="box">
+                
+                <p>Don't have an account <a href="/register">create now</a></p>
+                <input type="submit" value="login now" class="btn" >
+            </form> 
         </div>
-            <div class="y-wrap">
-                <% if(isAuthenticated) { %>
-                    <button id="auth" data-type="logout">Logout</button>
-                <% } else { %> 
-                    <input class='userInput' placeholder="username, or email..." required />
-                    <input class='userInput' placeholder="password..." required />
-                    <button id="auth" data-type="login">Login</button>
-                <% } %>     
-            </div>
-            <div class ="userregistration">
-                <h3>Don't have an account?</h3><button class='myButton'>sign up</button>
-            </div>
-            <div class="x-wrap">
-                <% if(isAuthenticated) { %>
-                    <button id="reg" data-type="signup">sign up</button>
-                <% } %>
-       
-        </main>
-    <script src="./js/main.js"></script>
-</body>
-</html>
+    </div>
+    
+   
  
 
 
