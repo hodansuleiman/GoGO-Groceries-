@@ -1,2 +1,1 @@
-# supermoms-
-Many stay-at-home moms deal with a never ending to do list. Anything from prepping meals., budgeting for their families, diaper changes, school runs, and so forth. While it is a rewarding to be able to stay home and raise your child, it can also be stressful and even downright lonely at times. Moms need a place interact and socialize, share stories, and just let their hair down. This app will help connect moms who have similar interests. 
+Backend bootcamp project
